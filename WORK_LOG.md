@@ -71,6 +71,21 @@ Status values follow the requested protocol. A commit is marked `PUSHED_AND_VERI
 - **Dependencies:** AUDIT-001 and PUB-001.
 - **Known limitations:** the log’s own follow-up entry is this next documentation commit; the three standalone project repositories remain empty pending an explicit extraction decision.
 
+### PUB-003 — verify the central log's final status
+
+- **Date/time:** 2026-10-23.
+- **Repository:** `https://github.com/Ayabeg/Dead-Magnet`.
+- **Branch:** `main`.
+- **Feature/task:** finish the required work-log update after the initial publication.
+- **Summary:** recorded the verified follow-up commit and corrected the repository table to the current central-log tip.
+- **Important files changed:** `WORK_LOG.md` only.
+- **Tests/checks:** `git diff --check`, staged diff review, push, and local-versus-remote hash comparison passed.
+- **Commit:** `5b3b9907bc5e8ae0d2b3ec1e0e2558310f9faa35` — `docs: verify central work log publication`.
+- **GitHub:** https://github.com/Ayabeg/Dead-Magnet/commit/5b3b9907bc5e8ae0d2b3ec1e0e2558310f9faa35
+- **Push verification:** `PUSHED_AND_VERIFIED`; remote `main` exactly matches this commit.
+- **Dependencies:** PUB-002.
+- **Known limitations:** no implementation source has been added to the three empty standalone repositories.
+
 ### HIST-001 — shared acquisition foundation and documentation
 
 - **Repository/branch:** `https://github.com/Ayabeg/EvoCrm`, `main` history published on `codex/acquisition-verified-20261023`.
@@ -156,7 +171,7 @@ Status values follow the requested protocol. A commit is marked `PUSHED_AND_VERI
 | Repository | Local state | GitHub state verified at audit | Publication status |
 |---|---|---|---|
 | `https://github.com/Ayabeg/EvoCrm` | `main` at `58d00a84`; four preserved user edits | remote `main` at `b772e134`; published branch at `58d00a84` | `PUSHED_AND_VERIFIED` on `codex/acquisition-verified-20261023`; `main` intentionally unchanged |
-| `https://github.com/Ayabeg/Dead-Magnet` | `main` at `2a26f515` | `main` at `2a26f515` | `PUSHED_AND_VERIFIED`; central log published |
+| `https://github.com/Ayabeg/Dead-Magnet` | `main` at `5b3b9907` | `main` at `5b3b9907` | `PUSHED_AND_VERIFIED`; central log published |
 | `https://github.com/Ayabeg/outbound-system` | unborn `main`, no files | no remote heads or tags | no implementation source; no commit made |
 | `https://github.com/Ayabeg/Lead-enrichment-system` | unborn `main`, no files | no remote heads or tags | no implementation source; no commit made |
 | `https://github.com/Awaisali36/50k-lead-generation-system` | clean `main` at `f3037f0` | `main` at `f3037f0` | reference-only; no changes made |
