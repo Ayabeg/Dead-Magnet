@@ -56,6 +56,21 @@ Status values follow the requested protocol. A commit is marked `PUSHED_AND_VERI
 - **Dependencies:** AUDIT-001.
 - **Known limitations:** the branch is not merged into remote `main`; the remote `main` contains one newer commit and must be reconciled through a normal review/merge process.
 
+### PUB-002 — publish and verify the central work log
+
+- **Date/time:** 2026-10-23.
+- **Repository:** `https://github.com/Ayabeg/Dead-Magnet`.
+- **Branch:** `main`.
+- **Feature/task:** publish the required central work-tracking document.
+- **Summary:** committed the audit inventory, cross-repository mapping, historical implementation summary, verification evidence, current statuses, outstanding work, and repository state in `WORK_LOG.md`.
+- **Important files changed:** `WORK_LOG.md` only.
+- **Tests/checks:** `git diff --check` and staged diff review passed; the push completed; local and remote `main` refs were compared.
+- **Commit:** `2a26f5153fc41bd6f5739a3f375909edf53d92a3` — `docs: add connected acquisition work log`.
+- **GitHub:** https://github.com/Ayabeg/Dead-Magnet/commit/2a26f5153fc41bd6f5739a3f375909edf53d92a3
+- **Push verification:** `PUSHED_AND_VERIFIED`; remote `main` exactly matches the local commit.
+- **Dependencies:** AUDIT-001 and PUB-001.
+- **Known limitations:** the log’s own follow-up entry is this next documentation commit; the three standalone project repositories remain empty pending an explicit extraction decision.
+
 ### HIST-001 — shared acquisition foundation and documentation
 
 - **Repository/branch:** `https://github.com/Ayabeg/EvoCrm`, `main` history published on `codex/acquisition-verified-20261023`.
@@ -141,7 +156,7 @@ Status values follow the requested protocol. A commit is marked `PUSHED_AND_VERI
 | Repository | Local state | GitHub state verified at audit | Publication status |
 |---|---|---|---|
 | `https://github.com/Ayabeg/EvoCrm` | `main` at `58d00a84`; four preserved user edits | remote `main` at `b772e134`; published branch at `58d00a84` | `PUSHED_AND_VERIFIED` on `codex/acquisition-verified-20261023`; `main` intentionally unchanged |
-| `https://github.com/Ayabeg/Dead-Magnet` | unborn `main`, log added locally | no remote heads or tags before this log commit | central log publication pending |
+| `https://github.com/Ayabeg/Dead-Magnet` | `main` at `2a26f515` | `main` at `2a26f515` | `PUSHED_AND_VERIFIED`; central log published |
 | `https://github.com/Ayabeg/outbound-system` | unborn `main`, no files | no remote heads or tags | no implementation source; no commit made |
 | `https://github.com/Ayabeg/Lead-enrichment-system` | unborn `main`, no files | no remote heads or tags | no implementation source; no commit made |
 | `https://github.com/Awaisali36/50k-lead-generation-system` | clean `main` at `f3037f0` | `main` at `f3037f0` | reference-only; no changes made |
